@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bill_pay.css">
+    <title>Loan Saving Dashboard</title>
+  </head>
+  <body>
+    <!-- Top Header Start -->
+    <nav>
+      <div class="logo">Team</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <!-- Top Header End -->
+    <!--Banner Section End -->
+    <section class="banner_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-3 m-auto d-flex justify-content-center">
+            <div class="banner_logo">
+              <img
+                src="../assets/img/profile.png"
+                alt=""
+                class="img-fluid img-thumbnail rounded-circle"
+              />
+            </div>
+            <div class="banner_content">
+              <h2>Welcome</h2>
+              <p>Kamrul islam Raju</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Banner Section End -->
+
+
+    <section class="apply_loan mt-3">
+
+        <form action="#" class="form_progress depost_moeny">
+                <!-- Progress bar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-step progress-step-active" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                </div>
+                <!-- Steps -->
+                <div class="form-step form-step-active">
+                    <div class="input-group">
+                        <div class="label">
+                            টাকার পরিমান দিন  
+                        </div>
+                        <input type="text" placeholder="টাকার পরিমান সংখ্যায় লিখুন">
+                    </div>
+
+                    <div class="button_container">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+
+                    <div class="input-group">
+                       <img src="../assets/img/bklogo.png" alt="" style="border:1px solid #e8e2e2" width="45%">
+                       <img src="../assets/img/Nagad.png" alt="" style="border:1px solid #e8e2e2;margin-left:5px" width="45%">
+                    </div>
+
+
+                    <div class="input-group">
+                        <div class="label">
+                           টাকা জমা দেয়ার পেমেন্ট মেথড সিলেক্ট করুন 
+                        </div>
+                    </div>
+
+                     <div class="main-wrapper">
+                            <div class="wrapper">
+                                <input type="radio" name="select" id="option-4">
+                                <input type="radio" name="select" id="option-5">
+                                <label for="option-4" class="option option-4" onclick="bikas_recive_payment();">
+                                  <div class="dot"></div>
+                                  <span>বিকাশ</span>
+                                </label>
+                                <label for="option-5" class="option option-5" onclick="nogod_recice_payment();">
+                                  <div class="dot"></div>
+                                  <span>নগদ </span>
+                                </label>
+                              </div>
+                        </div>
+
+                    <div id="payment_box_recive">
+                        <div class="input-group">
+                            <div class="label" id="payment_recive_content">
+                               
+                            </div>
+                            <input type="number" placeholder="" id="payment_recive_placeholder">
+                        </div>
+                    </div>
+                  
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+
+                    <div class="input-group justify-content-center">
+                        <h4>আপনার টাকা জমা দেয়া  সম্পূর্ণ  হয়েছে ধন্যবাদ ..</h4>
+                    </div>
+
+
+                      
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev btn2">Previous</a>
+                        <input type="submit" value="Submit" class=" btn"/>
+                    </div>
+                    
+                </div>
+            </form>
+
+
+
+    </section>
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

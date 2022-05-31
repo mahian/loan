@@ -1,0 +1,243 @@
+
+.topup_section img {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  form {
+    text-align: center;
+  }
+.topup_section input[type=radio] {
+    display: none;
+   
+  }
+  
+.topup_section img:hover {
+    opacity:0.6;
+    cursor: pointer;
+  }
+  
+.topup_section img:active {
+    opacity:0.4;
+    cursor: pointer;
+  }
+  
+ .topup_section input[type=radio]:checked + label > img {
+    cursor: pointer;
+    opacity: 0.6;
+  }
+
+ /* End Banner section */
+
+ /* start service area */
+ 
+
+.topup_check_blance .option{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 1px solid lightgrey;
+  transition: all 0.3s ease;
+  padding: 10px 40px;
+text-transform: capitalize;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+border-color: #0069d9;
+background: #0069d9;
+}
+
+.check_blance .option span{
+font-size: 20px;
+color: #808080;
+}
+#option-1:checked:checked ~ .option-1, #option-2:checked:checked ~ .option-2 {
+
+  background: #9fe19f;
+  color: #04622d !important;
+  border: 1px solid #04622d59 !important;
+}
+#option-1, #option-2{
+  color: #04622d !important;
+  border: 1px solid #ddd!important;
+}
+
+
+ 
+  
+
+  /* =======================start form area================= */
+
+ input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background: #f1f1f1;
+  
+}
+select{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  background: #f1f1f1;
+  
+}
+.my_input input[type=text] {
+  width: 100%;
+  padding: 15px;
+  display: inline-block;
+  background: #f1f1f1;
+  
+ 
+}
+ .my_input input[type=text]{
+   
+    background-position: 1070px 15px; 
+    background-size: 20px 20px;
+    background-repeat: no-repeat; 
+}
+ input[type=password]{
+    width: 100%;
+    padding: 15px 15px 15px 40px;
+    display: inline-block;
+    background: #f1f1f1;
+
+}
+input,select{
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin: 5px 0 10px 0!important;
+    font-size: 17px;
+    outline: none;
+}
+.eyes {
+  position: absolute;
+  margin: 21px -35px -2px;
+  color: gray;
+  font-size: 18px;
+}
+#hide1{
+    display: none;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+/* -----new css---- */
+.label2 {
+  width: 17%;
+}
+.submit-btn{
+  width: 100%;
+  color: #fff;
+  background-color: #04622d;
+  font-weight: 500;
+  padding: 6px;
+}
+.lock {
+  position: absolute;
+  color: gray;
+  font-size: 18px;
+  top: 21px;
+  left: 28px;
+}
+.check_blance {
+  text-align: left;
+}
+/* -----new css---- */
+
+@media (max-width:992px) {
+  .topup_section img {
+    width: 80px;
+    height: 80px;
+  }
+    }
+
+
+@media (max-width:767px) {
+   .topup_section img {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+  }
+  input {
+    padding: 8px!important;
+}
+select {
+  padding: 8px
+}
+    
+}
+@media (max-width:575px) {
+   .topup_section img {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+  }
+  .topup_check_blance p{
+    display: flex ;
+    width: 100% !important;
+  }
+  /* -----new css---- */
+  .topup_check_blance .option {
+    margin: 0 4px;
+    padding: 7px 15px;
+  }
+  .label2 {
+    width: 17%;
+  }
+  .h3, h3 {
+    font-size: 19px;
+  } 
+  input {
+    padding: 8px!important;
+}
+select {
+  padding: 8px
+}
+}
+
+
+@media (max-width:375px) {
+   .topup_section img {
+    width: 40px;
+    height: 40px;
+  }
+      
+}
+
+ 

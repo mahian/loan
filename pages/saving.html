@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bill_pay.css">
+    <title>Loan Saving Dashboard</title>
+  </head>
+  <body>
+    <!-- Top Header Start -->
+    <nav>
+      <div class="logo">Team</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <!-- Top Header End -->
+    <!--Banner Section End -->
+    <section class="banner_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-3 m-auto d-flex justify-content-center">
+            <div class="banner_logo">
+              <img
+                src="../assets/img/profile.png"
+                alt=""
+                class="img-fluid img-thumbnail rounded-circle"
+              />
+            </div>
+            <div class="banner_content">
+              <h2>Welcome</h2>
+              <p>Kamrul islam Raju</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Banner Section End -->
+
+
+    <!-- Saving Info start -->
+    <section class="category_menu">
+                <div class="container services-list">
+                    <div class="row d-flex justify-content-center">
+                      
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-3 p-0">
+                            <div class="category" data-toggle="modal" data-target="#takauttolon">
+                
+                                <div class="category-img text-center">
+                                    <img src="../assets/img/deal.png" alt="Services-1">
+                                </div>
+                                <div class="card-body p-0 text-center">
+                                    <p>টাকা উত্তোলন</p>
+                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-3 p-0">
+                            <div class="category" onclick="window.location.href='depost_money.html'">
+                            
+                                    <div class="category-img text-center ">
+                                        <img src="../assets/img/coins.png" alt="Services-2">
+                                    </div>
+                                    <div class="card-body p-0 text-center">
+                                        <p>টাকা জমা </p>
+                                
+                                    </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+          </section>
+    <!-- Saving Info end -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="takauttolon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">টাকা উত্তোলন</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body payment_method_modal">
+        <form action="#" class="form_progress" style="width:100%">
+                <!-- Progress bar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-step progress-step-active" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                </div>
+                <!-- Steps -->
+                <div class="form-step form-step-active">
+                    <div class="input-group justify-content-center">
+                        <h4>আপনার মোট ব্যালান্স</h4>
+                    </div>
+
+                     <div class="money_joma bg-white rounded-circle">
+                         <h2>1000</h2>
+                     </div>
+
+                    <div class="button_container">
+                        <a href="#" class="btn btn-next width-50 ml-auto">টাকা উত্তোলন করুন</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <div class="label">
+                            টাকার পরিমান দিন  
+                        </div>
+                        <input type="text" placeholder="টাকার পরিমান সংখ্যায় লিখুন">
+                    </div>
+                  
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+
+                    <div class="input-group">
+                        <div class="label">
+                           টাকা রিসিভ করার পেমেন্ট মেথড সিলেক্ট করুন
+                        </div>
+                    </div>
+
+                     <div class="main-wrapper">
+                            <div class="wrapper">
+                                <input type="radio" name="select" id="option-4">
+                                <input type="radio" name="select" id="option-5">
+                                <label for="option-4" class="option option-4" onclick="bikas_payment();">
+                                  <div class="dot"></div>
+                                  <span>বিকাশ</span>
+                                </label>
+                                <label for="option-5" class="option option-5" onclick="nogod_payment();">
+                                  <div class="dot"></div>
+                                  <span>নগদ </span>
+                                </label>
+                              </div>
+                        </div>
+
+                    <div id="payment_box">
+                        <div class="input-group">
+                            <div class="label" id="money_recive_content">
+                               
+                            </div>
+                            <input type="number" placeholder="" id="payment_placeholder">
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+
+                    <div class="input-group justify-content-center">
+                        <h4>আপনার লে‌নেদেন যাচাই করা হ‌চ্ছে</h4>
+                    </div>
+
+
+                      
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev btn2">Previous</a>
+                        <input type="submit" value="Submit" class=" btn"/>
+                    </div>
+                    
+                </div>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Optional JavaScript -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>

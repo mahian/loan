@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/bill_pay.css" />
+    <title>Loan Saving Dashboard</title>
+    <style>
+      .payment_getwey {
+        display: flex;
+        justify-content: center;
+      }
+      .payment_getwey label{
+        padding: 5px;
+      }
+      .payment_getwey img {
+        width: 70px;
+        margin: 0px 10px;
+      }
+      .active{
+        background: var(--primary-color);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Top Header Start -->
+    <nav>
+      <div class="logo">Team</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="../index.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </nav>
+    <!-- Top Header End -->
+    <!--Banner Section End -->
+    <section class="banner_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-md-3 m-auto d-flex justify-content-center">
+            <div class="banner_logo">
+              <img
+                src="../assets/img/profile.png"
+                alt=""
+                class="img-fluid img-thumbnail rounded-circle"
+              />
+            </div>
+            <div class="banner_content">
+              <h2>Welcome</h2>
+              <p>Kamrul islam Raju</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Banner Section End -->
+
+    <section class="apply_loan mt-3">
+      <form action="#" class="form_progress depost_moeny">
+        <!-- Progress bar -->
+        <div class="progressbar">
+          <div class="progress" id="progress"></div>
+          <div
+            class="progress-step progress-step-active"
+            data-title="ধাপ"
+          ></div>
+          <div class="progress-step" data-title="ধাপ"></div>
+          <div class="progress-step" data-title="ধাপ"></div>
+        </div>
+        <!-- Steps -->
+        <div class="form-step form-step-active">
+          <div class="input-group">
+            <div class="label">টাকা জমা দেয়ার পেমেন্ট মেথড সিলেক্ট করুন</div>
+          </div>
+
+          <div class="main-wrapper">
+            <div class="payment_getwey">
+              <label for="payment-1"><img src="../assets/img/MasterCard.png" alt="" /></label>
+              <input type="radio" id="payment-1">
+
+              <label for="payment-1"><img src="../assets/img/MasterCard.png" alt="" /></label>
+              <input type="radio" id="payment-2">
+
+              <label for="payment-1"><img src="../assets/img/MasterCard.png" alt="" /></label>
+              <input type="radio" id="payment-3">
+
+              <label for="payment-1"><img src="../assets/img/MasterCard.png" alt="" /></label>
+              <input type="radio" id="payment-4">
+            </div>
+            <div class="mt-2">
+              <label for="date" class="exptxt">Expiry</label>
+              <input
+                type="number"
+                name="number"
+                class="form-control expiry"
+                placeholder="MM / YY"
+              />
+            </div>
+            <div>
+              <label for="card number" class="">CARD NUMBER</label>
+              <input
+                type="number"
+                name="number"
+                class="form-control inputtxt"
+                placeholder="8881 2545 2545 2245"
+              />
+            </div>
+            <div>
+              <label for="cvv" class="cvvtxt">CVV</label>
+              <input
+                type="number"
+                name="number"
+                class="form-control cvv"
+                placeholder="123"
+              />
+            </div>
+          </div>
+          <div class="button_container">
+            <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+          </div>
+        </div>
+        <div class="form-step">
+          
+          <div class="my-3">আপনার একাউন্ট এ <strong>5000</strong> টাকা আছে, আপনি কি জমা দিতে ইচ্ছুক?</div>
+
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev">Previous</a>
+            <a href="#" class="btn btn-next">Next</a>
+          </div>
+        </div>
+        <div class="form-step">
+          <div class="input-group">
+            <div class="label">
+                টাকার পরিমান দিন  
+            </div>
+            <input type="text" placeholder="টাকার পরিমান সংখ্যায় লিখুন">
+        </div>
+
+          <div class="btns-group">
+            <a href="#" class="btn btn-prev btn2">Previous</a>
+            <input type="submit" value="Submit" class="btn" />
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.payment_getwey label').click(function() {
+          $(this).toggleClass("active");
+      })
+      });
+    </script>
+  </body>
+</html>

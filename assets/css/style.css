@@ -1,0 +1,477 @@
+@import url('https://fonts.maateen.me/kalpurush/font.css');
+@import url('category.css');
+@import url('apply_loan.css');
+@import url('top_up.css');
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+
+:root {
+  --primary-color: rgb(11, 78, 179);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.start_color{
+  color: red;
+}
+
+#parent_text_cng{
+  display: none;
+}
+
+#bank_box{
+  display: none;
+}
+.nid_box{
+  display: none;
+}
+.passport_box{
+  display: none;
+}
+.dateofbirht_box{
+  display: none;
+}
+
+#nomoni_text_cng{
+  display: none;
+}
+.nomoni_nid_box{
+  display: none;
+}
+.nomoni_dateofbirht_box{
+  display: none;
+}
+.nomoni_passport_box{
+  display: none;
+}
+
+#jamindar_text_cng{
+  display: none;
+}
+
+.jamindar_nid_box{
+  display: none;
+}
+.jamindar_dateofbirht_box{
+  display: none;
+}
+.jamindar_passport_box{
+  display: none;
+}
+
+.probasi_select_show{
+  display: none;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kalpurush', sans-serif;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover{
+  color: #ebebeb;
+  text-decoration: none;
+}
+.text-black:hover {
+    color: #645d5d;
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kalpurush', sans-serif;
+}
+section{width: 100%;display: block;}
+
+
+
+/*--------------------------------------------------------------
+# Top Header
+--------------------------------------------------------------*/
+
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #86c5f5;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i::before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+    z-index: 1;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+
+
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+
+
+/*--------------------------------------------------------------
+# Banner Section
+--------------------------------------------------------------*/
+.banner_section{
+    background-color: #80B0D4;
+    color: #fff;
+    padding: 20px 0px;
+
+}
+
+.banner_logo{
+    width: 30%;
+    text-align: center;
+}
+
+.banner_logo img{
+    width: 70%;
+}
+
+.banner_content h2{
+    font-weight: 700;
+    margin-top: 35px;
+    line-height: 20px;
+}
+.banner_content p{
+    font-weight: 500;
+}
+
+@media (max-width: 991px) {
+    .banner_logo img{
+       margin-top: 25px;
+    }
+}
+@media (max-width: 767px) {
+    .banner_logo img{
+       margin-top: 0px;
+    }
+    .banner_content h2{
+        font-weight: 700;
+        margin-top: 20px;
+    }
+}
+
+/*--------------------------------------------------------------
+# Apply Form Progress Bar
+--------------------------------------------------------------*/
+/* Global Stylings */
+/* label {
+  display: block;
+  margin-bottom: 0.5rem;
+} */
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: #f1f1f1;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2rem 0 4rem;
+}
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+.progress-step-processing {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Form */
+.form_progress {
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1800px) {
+    .form_progress{
+        width: clamp(700px, 30%, 430px);
+    }
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 10px 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+ 
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+/*--------------------------------------------------------------
+# Apply Form Progress Bar End
+--------------------------------------------------------------*/
+.money_joma{
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+    margin-bottom: 45px;
+
+}
+
+.money_joma h2{
+    line-height: 130px;
+}
+
+#payment_box{
+  display: none;
+}
+
+.payment_method_modal .form_progress .progress-step {
+  z-index: 1;
+}
+
+.payment_method_modal .form_progress .progressbar::before, .progress{
+  z-index: 0;
+}
+
+@media (max-width: 575px) {
+  .payment_method_modal .form_progress{
+    width: clamp(275px, 30%, 430px) !important;
+    padding:15px 5px!important;
+  }
+}
+
+.depost_moeny{
+  width: clamp(320px, 30%, 430px);
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+}
+
+.depost_moeny .progressbar::before, .progress{
+  z-index: -1;
+}
+
+.depost_moeny .wrapper{
+  width: 350px;
+}
+
+#payment_box_recive{
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .depost_moeny .wrapper{
+    width: 234px;
+  }
+}

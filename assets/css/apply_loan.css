@@ -1,0 +1,310 @@
+.input_box_file{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.apply_loan{
+  min-height: 100vh;
+}
+
+/* basic info css start */
+
+.main-radio{
+  display: none;
+}
+.main-radio+label{
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border: 1px solid black;
+  position: relative;
+  border-radius: 3px;
+  margin-right: 11px;
+  margin-bottom: 0px;
+}
+
+.main-radio:checked+label::after {
+  position: absolute;
+  content: " ";
+  height: 10px;
+  width: 5px;
+  border: 2px solid #212121;
+  left: 0;
+  right: 0;
+  top: -2px;
+  bottom: 0;
+  margin: auto;
+  transform: rotate(45deg);
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.radio{
+  display: block;
+  float: left;
+}
+
+.radio2 {
+  display: block;
+  margin-top: 7px;
+  width: 100%;
+  text-align: left;
+}
+.label-loan {
+  float: left;
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: -23px
+}
+
+label {
+  margin-bottom: 0;
+}
+.label.text-start {
+  text-align: left;
+}
+.select-date{
+  display: block!important;
+}
+
+/* basic-info css end */
+
+/* img start */
+.apply_loan_img_upload {
+  width: 50%;
+}
+.upload-wrapper{
+  position: relative;
+  height: 200px;
+  width:91%;
+  border-radius: 10px;
+  border: 2px dashed #9658fe;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+.active{
+  border: none;
+}
+.upload-wrapper .main-img{
+  position: absolute;
+  height: 100%;
+  border: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload-wrapper .main-img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+.img-content .icon{
+  font-size: 50px;
+  color: #9658fe;
+}
+.img-content .text-img {
+  font-size: 17px;
+  color: #585878;
+  font-weight: 500;
+  margin-top: -16px;
+}
+#cancel-btn{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+  display: none;
+  z-index: 9999;
+}
+.file-name{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  color: #fff;
+  padding: 3px 0px;
+  font-size: 17px;
+  background: linear-gradient(135deg,#3a8ffe 0%,black);
+  display: none;
+}
+#custom-btn {
+  margin-top: 11px;
+  width: 91%;
+  height: 30px;
+  display: block;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: linear-gradient(135deg,#3a8ffe 0%,black);
+  outline: none;
+}
+@media(max-width:575px){
+  #custom-btn {
+    font-size: 11px;
+  }
+  .img-content .icon {
+    font-size: 37px;
+  }
+  .upload-wrapper {
+    height: 120px;
+  }
+  .img-content .text-img {
+    font-size: 14px;
+    margin-top: 1px;
+  }
+  
+}
+.img-field{
+    height:0px!important;
+    margin:0!important;
+}
+/* img end */
+
+/* kistir dhoron start*/
+.wrapper {
+  display: inline-flex;
+  height: 85px;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 0px;
+}
+.wrapper .option {
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 3px;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0 22px;
+  border: 1px solid rgb(11, 11, 82);
+  transition: all 0.3s ease;
+}
+
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-4:checked:checked ~ .option-4,
+#option-5:checked:checked ~ .option-5,
+#option-6:checked:checked ~ .option-6{
+  background: linear-gradient(135deg,#3a8ffe 0%,black);
+}
+
+#option-4:checked:checked ~ .option-4 .dot::before,
+#option-5:checked:checked ~ .option-5 .dot::before,
+#option-6:checked:checked ~ .option-6 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-4:checked:checked ~ .option-4 span,
+#option-5:checked:checked ~ .option-5 span,
+#option-6:checked:checked ~ .option-6 span{
+  color: #fff;
+}
+.field.field2 {
+  margin-bottom: -41px!important;
+  margin-top: 55px!important;
+}
+@media(min-width:576px) and (max-width:767px){
+  .h1, h1 {
+    font-size: 31px;
+  }
+  .wrapper {
+    width: 280px!important;
+}
+  .wrapper .option {
+    margin: 0 1px;
+    padding: 0 0px;
+  }
+  #custom-btn {
+    font-size: 11px;
+}
+.select-date select{
+  padding: 10px 1px;
+}
+.upload-wrapper {
+  height: 120px;
+}
+.form_progress {
+  padding: 15px!important;
+}
+}
+@media(max-width:575px){
+  .h1, h1 {
+    font-size: 31px;
+  }
+  
+  .form_progress {
+    width: clamp(290px, 30%, 430px) !important;
+    padding: 15px!important;
+}
+  .field.field2 {
+    margin-bottom: -12px!important;
+    margin-top: 55px!important;
+}
+form .page .field input, select {
+  padding-left: 0px;
+}
+.wrapper .option {
+  margin: 0 1px;
+  padding: 0 0px;
+}
+.wrapper {
+  width: 234px;
+}
+.container_form {
+  padding: 20px 23px;
+}
+.select-date select{
+  padding: 10px 1px;
+}
+}
+/* kistir dhoron end*/
+.main-wrapper {
+  display: block;
+  text-align: left;
+}
+.btn2{
+  height: 50px;
+  margin-top: 5px;
+}

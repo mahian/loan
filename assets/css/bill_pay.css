@@ -1,0 +1,45 @@
+.vertical-progress_bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    counter-reset: step;
+    height: auto;
+    margin-right: 2rem;
+  }
+  
+  .vertical-progress_bar::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  .tracking_container{
+      display: flex;
+  }
+  .step_title{
+      margin: 0;
+      color: var(--primary-color);
+      font-size: 22px;
+  }
+  .details p{
+      margin: 0 0 50px 0;
+      color: #707070;
+  }
+  .details:nth-last-child(1) p{
+      margin: 0;
+    }
+    .button_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .button{
+        width: 100px;
+    }

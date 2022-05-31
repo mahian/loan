@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <title>Loan Dashboard</title>
+    </head>
+    <body>
+        <!-- Top Header Start -->
+        <nav>
+            <div class="logo">
+                Team
+            </div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </nav>
+        <!-- Top Header End -->
+        <!--Banner Section End -->
+        <section class="banner_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-3 m-auto d-flex justify-content-center">
+                        <div class="banner_logo">
+                            <img src="../assets/img/profile.png" alt="" class="img-fluid img-thumbnail rounded-circle">
+                        </div>
+                        <div class="banner_content">
+                            <h2>Welcome </h2>
+                            <p>Kamrul islam Raju</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Banner Section End -->
+        <!-- Apply Loan  Area -->
+        <section class="apply_loan mt-3">
+            
+            <form action="#" class="form_progress">
+                <h1 class="text-center">আবেদন ফর্ম </h1>
+                <!-- Progress bar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+                    <div class="progress-step progress-step-active" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                    <div class="progress-step" data-title="ধাপ"></div>
+                </div>
+                <!-- Steps -->
+                <div class="form-step form-step-active">
+                    <div class="input-group">
+                        <h4>ঋণ গ্রহীন কারীর তথ্য</h4>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label">
+                            ঋণ গ্রহীন কারীর নাম
+                        </div>
+                        <input type="text" placeholder="ঋণ গ্রহীন কারীর নাম">
+                    </div>
+                    <div class="input-group">
+                        <div class="radio">
+                            <input value="1" type="radio" name="gardiants" id="father" class="main-radio gardinats">
+                            <label for="father"></label><span>পিতা /</span>
+                            <input value="2" type="radio" name="gardiants" id="husband"  class="main-radio gardinats">
+                            <label  for="husband"></label><span>স্বামী</span>
+                         </div>
+                         
+                    </div>
+                    <div class="input-group">
+                        <div class="radio gardinats_label">
+                            <label id='parent_text_cng'></label>
+                         </div>
+                         
+                        <input type="text" placeholder="আপনার পিতা / স্বামী সিলেক্ট করুন" id="gardian_placeholder">
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            মাতার নাম
+                        </div>
+                        <input type="text" placeholder=" মাতার নাম">
+                    </div>
+                    
+                    <div class="main_upload d-flex">
+                        <div class="apply_loan_img_upload" id="profile_pic_img"> 
+                            <span>আপনার ছবি আপলোড করুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="previewImgOne" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file profile_pic" accept="image/*" onchange="pic_one(this);">
+                            </div>
+                        </div>
+                        <div class="apply_loan_img_upload" id="signature_pic_img"> 
+                            <span>আপনার সাক্ষর আপলোড করুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="previewImgTwo" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file signature" accept="image/*" onchange="pic_two(this);">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="label">
+                            জাতীয় পরিচয় পত্র
+                        </div>
+                        <select name="" id="nid_card">
+                            <option>--- বাছাই করুন ---</option>
+                            <option value="ভোটার আইডি">ভোটার আইডি</option>
+                            <option value="পাসপোর্ট">পাসপোর্ট</option>
+                            <option value="জন্ম নিবন্ধন">জন্ম নিবন্ধন</option>
+                        </select>
+                    </div>
+                    <!-- img upload start -->
+                    <div class="main_upload nid_box">
+                        <div class="apply_loan_img_upload" id="nid_first_pic_img"> 
+                            <span>ভোটার আইডি সামনের অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="previewImgThree" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="nid_first_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file first_nid" accept="image/*" onchange="pic_three(this);">
+                            </div>
+                        </div>
+                        <div class="apply_loan_img_upload" id="nid_second_pic_img"> 
+                            <span>ভোটার আইডি পিছনের  অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="previewImgFour" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="nid_second_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file second_nid" accept="image/*" onchange="pic_four(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_upload passport_box justify-content-center">
+                        <div class="apply_loan_img_upload" id="passport_nid_pic"> 
+                            <span id="rin_imageup_content_cng">পাসপোর্ট অংশ তুলুন</span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="previewImgFive" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file passport_nid" accept="image/*" onchange="pic_five(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_upload dateofbirht_box justify-content-center">
+                        <div class="apply_loan_img_upload" id="datebirth_nid_pic"> 
+                            <span>জন্ম নিবন্ধন অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="previewImgSix" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file date_birth_pic" accept="image/*" onchange="pic_six(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- img upload end -->
+                    <div class="input-group">
+                        <div class="label">
+                            পেশা
+                        </div>
+                        <select name="" id="">
+                                <option>--- বাছাই করুন ---</option>
+                                <option value="GOVERNMENT_SERVICE">সরকারী চাকরি</option>
+                                <option value="PRIVATE_SERVICE">বেসরকারী চাকরি</option>
+                                <option value="BUSINESS">ব্যবসা</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            মাসিক আয়
+                        </div>
+                        <select name="" id="">
+                            <option>--- বাছাই করুন ---</option>
+                                <option value="BELOW_ONE_THOUSAND">১,০০০ টাকার নিম্নে</option>
+                                <option value="ONE_THOUSAND_TO_FIVE_THOUSAND">১,০০১ টাকা থেকে ৫,০০০ টাকা</option>
+                                <option value="FIVE_THOUSAND_TO_TEN_THOUSAND">৫,০০১ টাকা থেকে ১০,০০০ টাকা</option>
+                                <option value="TEN_THOUSAND_TO_TWENTY_THOUSAND">১০,০০১ টাকা থেকে ২০,০০০ টাকা</option>
+                                <option value="TWENTY_THOUSAND_TO_FIFTY_THOUSAND">২০,০০১ টাকা থেকে ৫০,০০০ টাকা</option>
+                                <option value="FIFTY_THOUSAND_TO_ONE_HUNDRED_THOUSAND">৫০,০০১ টাকা থেকে ১০০,০০০ টাকা</option>
+                                <option value="ONE_HUNDRED_THOUSAND_TO_TWO_HUNDRED_THOUSAND">১০০,০০১ টাকা থেকে ২০০,০০০ টাকা</option>
+                                <option value="ABOVE_TWO_HUNDRED_THOUSAND">২০০,০০০ টাকার উর্ধ্বে</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="">পূর্বের ঋণ আছে কিনা </label>
+                        <div class="radio radio2">
+                            <input value="yes" type="radio" name="loan" id="yes" class="main-radio back_check">
+                            <label for="yes"></label>হ্যা /
+                            <input value="no" type="radio" name="loan" id="no" class="main-radio back_check">
+                            <label for="no"></label>না
+                         </div>
+                    </div>
+
+                    <div id="bank_box">
+                        <div class="input-group">
+                        <div class="label">
+                            ব্যাংক নাম 
+                        </div>
+                            <input type="text" placeholder="Type in English">
+                        </div>
+                        <div class="input-group">
+                            <div class="label">
+                                টাকার পরিমান 
+                            </div>
+                            <input type="number" placeholder="Type in English">
+                        </div>
+                        <div class="input-group">
+                            <div class="label">
+                                একাউন্ট নাম্বার
+                            </div>
+                            <input type="number" placeholder="Type in English">
+                        </div>
+                    </div>
+                    
+
+
+
+                    <div class="button_container">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <h4>নমিনির তথ্য </h4>
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            নমিনির নাম
+                        </div>
+                        <input type="text" placeholder="Type in English">
+                    </div>
+
+
+                    <div class="input-group">
+                        <div class="radio">
+                            <input value="1" type="radio" name="gender" id="nomini-father" class="main-radio nomoni">
+                            <label for="nomini-father"></label><span>নমিনির পিতা /</span>
+                            <input value="2" type="radio" name="gender" id="nomini-husband" class="main-radio nomoni">
+                            <label for="nomini-husband"></label><span>স্বামী</span>
+                         </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="radio gardinats_label">
+                            <label id='nomoni_text_cng'></label>
+                         </div>
+                         
+                        <input type="text" placeholder="আপনার পিতা / স্বামী সিলেক্ট করুন" id="nomoni_placeholder">
+                    </div>
+
+
+                     <div class="input-group">
+                        <div class="label">
+                            নমিনির মাতার নাম
+                        </div>
+                        <input type="text" placeholder="নমিনির মাতার নাম">
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="label">
+                            নমিনির মোবাইল নাম্বার
+                        </div>
+                        <input type="number" placeholder="Type in English">
+                    </div>
+                    <div class="input-group field2 d-flex justify-content-center">
+                        <div class="label">
+                            নমিনির ছবি আপলোড করুন
+                        </div>
+                    </div>
+
+                        <div class="apply_loan_img_upload m-auto" id="nomoni_pic_img"> 
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="nomonir_pic" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file nomonir_profile_pic" accept="image/*" onchange="nomoni_pic(this);">
+                            </div>
+                        </div>
+
+
+
+                        <div class="input-group">
+                            <div class="label">
+                                নমিনির জাতীয় পরিচয় পত্র
+                            </div>
+                            <select name="" id="nomoni_nid">
+                                <option>--- বাছাই করুন ---</option>
+                                <option value="ভোটার আইডি">ভোটার আইডি</option>
+                                <option value="পাসপোর্ট">পাসপোর্ট</option>
+                                <option value="জন্ম নিবন্ধন">জন্ম নিবন্ধন</option>
+                            </select>
+                        </div>
+
+                        <!-- img upload start -->
+
+
+                        <div class="main_upload nomoni_nid_box">
+                        <div class="apply_loan_img_upload" id="Nomoni_first_pic"> 
+                            <span>ভোটার আইডি সামনের অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Nomonir_first_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="nomonir_nid_first_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file nomoni_first_nid" accept="image/*" onchange="nomoni_nid_first(this);">
+                            </div>
+                        </div>
+                        <div class="apply_loan_img_upload" id="Nomoni_second_pic"> 
+                            <span>ভোটার আইডি পিছনের  অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Nomonir_second_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="nomonir_nid_second_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file nomoni_second_nid" accept="image/*" onchange="nomoni_nid_second(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_upload nomoni_passport_box justify-content-center">
+                        <div class="apply_loan_img_upload" id="Nomoni_nid_pic"> 
+                            <span id="rin_imageup_content_cng">পাসপোর্ট অংশ তুলুন</span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Nomonir_nid_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="nomoni_cancel_nid"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file nomoni_passport_nid" accept="image/*" onchange="nomoni_nid_passport(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_upload nomoni_dateofbirht_box justify-content-center">
+                        <div class="apply_loan_img_upload" id="Nomoni_datebirth"> 
+                            <span>জন্ম নিবন্ধন অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Nomoni_datebirht_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="Nomonir_Databirht_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file nomoni_date_birth_pic" accept="image/*" onchange="nomoni_nid_dofBirth(this);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- img upload end -->
+                    <div class="input-group">
+                        <div class="label">
+                            নমিনির পেশা
+                        </div>
+                        <select name="" id="">
+                                <option>--- বাছাই করুন ---</option>
+                                <option value="GOVERNMENT_SERVICE">সরকারী চাকরি</option>
+                                <option value="PRIVATE_SERVICE">বেসরকারী চাকরি</option>
+                                <option value="BUSINESS">ব্যবসা</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            নমিনির মাসিক আয়
+                        </div>
+                        <select name="" id="">
+                            <option>--- বাছাই করুন ---</option>
+                                <option value="BELOW_ONE_THOUSAND">১,০০০ টাকার নিম্নে</option>
+                                <option value="ONE_THOUSAND_TO_FIVE_THOUSAND">১,০০১ টাকা থেকে ৫,০০০ টাকা</option>
+                                <option value="FIVE_THOUSAND_TO_TEN_THOUSAND">৫,০০১ টাকা থেকে ১০,০০০ টাকা</option>
+                                <option value="TEN_THOUSAND_TO_TWENTY_THOUSAND">১০,০০১ টাকা থেকে ২০,০০০ টাকা</option>
+                                <option value="TWENTY_THOUSAND_TO_FIFTY_THOUSAND">২০,০০১ টাকা থেকে ৫০,০০০ টাকা</option>
+                                <option value="FIFTY_THOUSAND_TO_ONE_HUNDRED_THOUSAND">৫০,০০১ টাকা থেকে ১০০,০০০ টাকা</option>
+                                <option value="ONE_HUNDRED_THOUSAND_TO_TWO_HUNDRED_THOUSAND">১০০,০০১ টাকা থেকে ২০০,০০০ টাকা</option>
+                                <option value="ABOVE_TWO_HUNDRED_THOUSAND">২০০,০০০ টাকার উর্ধ্বে</option>
+                        </select>
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <h4>জামিনদারের তথ্য</h4>
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            জামিনদারের নাম
+                        </div>
+                        <input type="text" placeholder="Type in English">
+                    </div>
+
+                    
+                    <div class="input-group">
+                        <div class="radio">
+                            <input value="1" type="radio" name="jamindar" id="jamindar-father" class="main-radio jamindar">
+                            <label for="jamindar-father"></label><span>জামিনদারের পিতা /</span>
+                            <input value="2" type="radio" name="jamindar" id="jamindar-husband" class="main-radio jamindar">
+                            <label for="jamindar-husband"></label><span>স্বামী</span>
+                         </div>
+                     
+                    </div>
+
+                    <div class="input-group">
+                        <div class="radio gardinats_label">
+                            <label id='jamindar_text_cng'></label>
+                         </div>
+                         
+                        <input type="text" placeholder="জামিনদারের পিতা / স্বামী সিলেক্ট করুন" id="jamindar_placeholder">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label">
+                            জামিনদারের মাতার নাম
+                        </div>
+                        <input type="text" placeholder="জামিনদারের মাতার নাম">
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label">
+                            জামিনদারের মোবাইল নাম্বার
+                        </div>
+                        <input type="number" placeholder="Type in English">
+                    </div>
+
+                <div class="input-group field2 d-flex justify-content-center">
+                    <div class="label">
+                        জামিনদারের ছবি আপলোড করুন
+                    </div>
+                </div>
+
+                    <div class="apply_loan_img_upload m-auto" id="jamindar_pic_img"> 
+                        <div class="upload-wrapper">
+                            <div class="main-img">
+                                <img id="Jamindar_previeImg" src="" alt="">
+                            </div>
+                            <div class="img-content">
+                                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                <div class="text-img">No file chosen,yet!</div>
+                            </div>
+                            <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                            <div class="file-name">File name here</div>
+                            <input type="file" class="input_box_file jamindar_profile_pic" accept="image/*" onchange="jamindar_pic(this);">
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="label">
+                            জামিনদারের জাতীয় পরিচয় পত্র
+                        </div>
+                        <select name="" id="jamindar_nid">
+                            <option>--- বাছাই করুন ---</option>
+                            <option value="ভোটার আইডি">ভোটার আইডি</option>
+                            <option value="পাসপোর্ট">পাসপোর্ট</option>
+                            <option value="জন্ম নিবন্ধন">জন্ম নিবন্ধন</option>
+                        </select>
+                    </div>
+
+                    <!-- img upload start -->
+                    <div class="main_upload jamindar_nid_box">
+                        <div class="apply_loan_img_upload" id="Jamindar_first_pic"> 
+                            <span>ভোটার আইডি সামনের অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Jamindar_first_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="jamindar_nid_first_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file jamindar_first_nid" accept="image/*" onchange="jamindar_nid_first(this);">
+                            </div>
+                        </div>
+                        <div class="apply_loan_img_upload" id="Jamindar_second_pic"> 
+                            <span>ভোটার আইডি পিছনের  অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Jamindar_second_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="jamindar_nid_second_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file jamindar_second_nid" accept="image/*" onchange="jamindar_nid_second(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_upload jamindar_passport_box justify-content-center">
+                        <div class="apply_loan_img_upload" id="Jamindar_nid_pic"> 
+                            <span id="rin_imageup_content_cng">পাসপোর্ট অংশ তুলুন</span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Jamindar_nid_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="jamindar_cancel_nid"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file jamindar_passport_nid" accept="image/*" onchange="jamindar_nid_passport(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main_upload jamindar_dateofbirht_box justify-content-center">
+                        <div class="apply_loan_img_upload" id="Jamindar_datebirth"> 
+                            <span>জন্ম নিবন্ধন অংশ তুলুন </span>
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Jamindar_datebirht_previewImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn" class="Jamindar_Databirht_cancel"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file jamindar_date_birth_pic" accept="image/*" onchange="jamindar_nid_dofBirth(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- img upload end -->
+
+                    <div class="input-group">
+                        <div class="label">
+                            জামিনদারের পেশা
+                        </div>
+                        <select name="" id="">
+                                <option>--- বাছাই করুন ---</option>
+                                <option value="GOVERNMENT_SERVICE">সরকারী চাকরি</option>
+                                <option value="PRIVATE_SERVICE">বেসরকারী চাকরি</option>
+                                <option value="BUSINESS">ব্যবসা</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            জামিনদারের মাসিক আয়
+                        </div>
+                        <select name="" id="">
+                            <option>--- বাছাই করুন ---</option>
+                                <option value="BELOW_ONE_THOUSAND">১,০০০ টাকার নিম্নে</option>
+                                <option value="ONE_THOUSAND_TO_FIVE_THOUSAND">১,০০১ টাকা থেকে ৫,০০০ টাকা</option>
+                                <option value="FIVE_THOUSAND_TO_TEN_THOUSAND">৫,০০১ টাকা থেকে ১০,০০০ টাকা</option>
+                                <option value="TEN_THOUSAND_TO_TWENTY_THOUSAND">১০,০০১ টাকা থেকে ২০,০০০ টাকা</option>
+                                <option value="TWENTY_THOUSAND_TO_FIFTY_THOUSAND">২০,০০১ টাকা থেকে ৫০,০০০ টাকা</option>
+                                <option value="FIFTY_THOUSAND_TO_ONE_HUNDRED_THOUSAND">৫০,০০১ টাকা থেকে ১০০,০০০ টাকা</option>
+                                <option value="ONE_HUNDRED_THOUSAND_TO_TWO_HUNDRED_THOUSAND">১০০,০০১ টাকা থেকে ২০০,০০০ টাকা</option>
+                                <option value="ABOVE_TWO_HUNDRED_THOUSAND">২০০,০০০ টাকার উর্ধ্বে</option>
+                        </select>
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <h4>অন্যান্য তথ্য</h4>
+                    </div>
+                    <div class="input-group">
+                        <div class="label">
+                            লোনের ধরন
+                        </div>
+                        <select name="" id="loan_types">
+                            <option>--- বাছাই করুন ---</option>
+                            <option value="প্রবাসী লোন">প্রবাসী লোন </option>
+                            <option value="হোম লোন">হোম লোন</option>
+                            <option value="পার্সোনাল লোন">পার্সোনাল লোন </option>
+                            <option value="উদ্যোক্তা লোন">উদ্যোক্তা লোন</option>
+                            <option value="বেবসায়ী লোন">বেবসায়ী লোন</option>
+                        </select>
+                    </div>
+
+                    <div class="probasi_select_show">
+                        <div class="input-group field2 d-flex justify-content-center">
+                            <div class="label" id="loan_content_cng">
+                                
+                            </div>
+                        </div>
+
+                        <div class="apply_loan_img_upload m-auto" id="probasi_pic_img"> 
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Probasi_previeImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file probasi_profile_pic" accept="image/*" onchange="probasi_pic(this);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-group field2 d-flex justify-content-center">
+                        <div class="label">
+                            নিচে মাসিক আয়ের ডকুমেন্ট  আপলোড করুন
+                        </div>
+                    </div>
+
+                        <div class="apply_loan_img_upload m-auto" id="income_pic_img"> 
+                            <div class="upload-wrapper">
+                                <div class="main-img">
+                                    <img id="Income_previeImg" src="" alt="">
+                                </div>
+                                <div class="img-content">
+                                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                    <div class="text-img">No file chosen,yet!</div>
+                                </div>
+                                <div id="cancel-btn"><i class="fas fa-times"></i></div>
+                                <div class="file-name">File name here</div>
+                                <input type="file" class="input_box_file income_profile_pic" accept="image/*" onchange="income_document(this);">
+                            </div>
+                        </div>
+
+
+            
+                        <div class="input-group">
+                            <div class="label">
+                                কত টাকা ঋন প্রয়োজন
+                            </div>
+                            <input type="number" placeholder="Type in English">
+                        </div>
+                        <div class="input-group img-field">
+                            <div class="label">
+                                কিস্তি ধরন
+                            </div>
+                        </div>
+                        <div class="main-wrapper">
+                            <div class="wrapper">
+                                <input type="radio" name="select" id="option-4" checked>
+                                <input type="radio" name="select" id="option-5">
+                                <input type="radio" name="select" id="option-6">
+                                <label for="option-4" class="option option-4">
+                                  <div class="dot"></div>
+                                  <span>মাসিক</span>
+                                </label>
+                                <label for="option-5" class="option option-5">
+                                  <div class="dot"></div>
+                                  <span>বাৎসরিক</span>
+                                </label>
+                              </div>
+                        </div>
+                        <div class="btns-group">
+                            <a href="#" class="btn btn-prev btn2">Previous</a>
+                            <input type="submit" value="Submit" class=" btn"/>
+                        </div>
+                    
+                </div>
+            </form>
+        </section>
+        <!-- Apply Loan  Area -->
+
+        <!-- img js -->
+        <script>
+       
+            
+    
+        </script>
+        <!-- img js -->
+
+        <!-- Optional JavaScript -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/main.js"></script>
+        <script>
+            // $('#OpenImgUpload').click(function(){ $('#imgupload').trigger('click'); });
+        </script>
+    </body>
+</html>
